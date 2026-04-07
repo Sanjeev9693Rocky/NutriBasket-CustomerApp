@@ -395,7 +395,10 @@ class _ItemDetailsScreenState extends State<ItemDetailsScreen> {
                                                       },
                                                     ),
                                                     const SizedBox(width: 8),
-                                                    Text('kg',
+                                                    Text(
+                                                      (itemController.item!.unitType != null && 
+                                                       itemController.item!.unitType!.toLowerCase() == 'Kg')
+                                                         ? 'Kg':'Pcs',
                                                         style: robotoMedium),
                                                   ]);
                                                 }),
